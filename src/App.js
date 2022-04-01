@@ -26,3 +26,18 @@ export default function App() {
     </Parent>
   );
 }
+
+
+//Props can also be destructured in a stateless functional component
+export default NameProp = () => {
+  const [name, setName] = useState("");
+  return (
+    <PropsDestructureTest name={name} />
+  )
+};
+
+export default const PropsDestructureTest = ({ name }) => {
+  return (
+    <h2>Hello {name} </h2>
+  );
+};
